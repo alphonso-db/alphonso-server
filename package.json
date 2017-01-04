@@ -7,7 +7,14 @@
     "url": "git+https://github.com/alphonso-db/alphonso-server.git"
   },
   "scripts": {
-    "start": "node ./src/server.js"
+		"start": "NODE_ENV=development babel-node ./src/server.js",
+    "start:prod": "NODE_ENV=production babel-node ./src/server.js",
+		"start:cluster": "NODE_ENV=production NODE_DEBUG=cluster babel-node ./src/cluster.js",
+    "start:nodemon": "nodemon ./src/server.js --exec babel-node --presets es2015",
+    "start:debug": "NODE_ENV=development babel-node --debug-brk ./src/server.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+		"nspcheck": "nsp check"
   },
   "keywords": [
     "database",
@@ -49,13 +56,24 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "babel-core": "^6.7.4",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
     "babel-jest": "^12.1.0",
     "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "eslint": "^3.12.2",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-loader": "^1.3.0",
-    "eslint-plugin-react": "^5.1.1"
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^5.1.1",
+    "mocha": "^3.2.0",
+    "node-inspector": "^0.12.8",
+    "nodemon": "^1.11.0",
+    "nsp": "^2.6.2",
+    "rimraf": "^2.5.4",
+    "supertest": "^2.0.1"
   }
 }
