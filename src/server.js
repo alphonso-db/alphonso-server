@@ -1,14 +1,12 @@
-'use strict';
-
-var http = require('http'),
-	app = require('./app'),
-	PRODUCT = require('../package.json'),
-	CONFIG = require('../configs/stack.conf');
+import http from 'http';
+import app from './app';
+import PRODUCT from '../package.json';
+import CONFIG from '../configs/stack.conf';
 
 /**
  * Create HTTP server.
  */
-var server = http.createServer(app.callback());
+let server = http.createServer(app.callback());
 
 /**
  * Listen on provided port, on all network interfaces.

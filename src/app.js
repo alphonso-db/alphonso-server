@@ -1,15 +1,11 @@
-'use strict';
+import path from 'path';
+import koa from 'koa';
+import bodyParser from 'koa-bodyparser';
+import logger from 'koa-logger';
+import staticServe from 'koa-static';
+import CONFIG from '../configs/stack.conf';
 
-var http = require('http');
-var path = require('path');
-
-var koa = require('koa');
-var bodyParser = require('koa-bodyparser');
-var logger = require('koa-logger');
-var staticServe = require('koa-static');
-
-var CONFIG = require('../configs/stack.conf');
-var app = koa();
+let app = koa();
 
 app.use(bodyParser());
 app.use(logger());
