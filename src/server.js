@@ -47,5 +47,5 @@ function onError(error) {
  */
 
 function onListening() {
-	console.log('\n\n\t %s v%s is listening on server %s:%s', PRODUCT.name, PRODUCT.version, CONFIG.server.ip, CONFIG.server.port);
+	console.log('\n %s v%s is listening on server %s:%s', PRODUCT.name, PRODUCT.version, CONFIG.server.ip, CONFIG.server.port);
 }

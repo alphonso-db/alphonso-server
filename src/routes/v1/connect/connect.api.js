@@ -1,6 +1,6 @@
-import router from 'koa-router';
+const router = require('koa-router')();
 
-router.get('/connect', (ctx, next) => {
+router.get('/connect', function(ctx, next) {
 	ctx.body = 'Trying to connect Mongodb server!';
 });
 
