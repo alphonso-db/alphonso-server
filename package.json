@@ -15,7 +15,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "nspcheck": "nsp check",
-    "outdate": "npm outdated"
+    "outdate": "yarn outdated"
   },
   "keywords": [
     "database",
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/alphonso-db/alphonso-server#readme",
   "dependencies": {
     "co": "^4.6.0",
+    "connect-mongo": "^1.3.2",
     "elasticsearch": "^11.0.1",
     "es6-promise": "^3.2.1",
     "events": "^1.1.0",
